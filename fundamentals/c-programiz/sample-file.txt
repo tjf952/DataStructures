@@ -1,0 +1,6 @@
+This is a sample file.
+This is a text line only. 
+This is 1 text line with 2 numbers within it.
+This line is a line with special characters like !, @, #, $, %.
+The line has an array: [1,2,3,4,5].
+This is the last line.
