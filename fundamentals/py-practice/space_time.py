@@ -16,8 +16,9 @@ def timer(func, *args) -> int:
     st = time.time()
     ans = func(*args)
     et = time.time()
-    print(f'Answer for {func.__name__}: {ans}')
-    print(f'Execution time for {func}: {(et-st)*1000} ms')
+    print(f"Answer for {func.__name__}: {ans}")
+    print(f"Execution time for {func}: {(et-st)*1000} ms")
+
 
 def permutations(s, start=0):
     if start == len(s) - 1:
@@ -30,32 +31,39 @@ def permutations(s, start=0):
             s[start], s[i] = s[i], s[start]
         return result
 
+
 def perms_in_str(s, b):
     ans = []
     perms = set(permutations(list(s)))
-    for idx in range(len(b)-len(s)):
-        substr = b[idx:idx+len(s)]
+    for idx in range(len(b) - len(s)):
+        substr = b[idx : idx + len(s)]
         if substr in perms:
             ans.append(substr)
     return ans
 
-seq = [1,1,2,3,5]
+
+seq = [1, 1, 2, 3, 5]
+
+
 def fib(n):
     while len(seq) <= n:
-        seq.append(seq[-1]+seq[-2])
+        seq.append(seq[-1] + seq[-2])
     return seq[n]
+
 
 def fib_rec(n):
     if n == 0 or n == 1:
         return 1
-    return fib_rec(n-1) + fib_rec(n-2)
+    return fib_rec(n - 1) + fib_rec(n - 2)
+
 
 def fib_itr(n):
     x, y, c = 1, 1, 1
     while c < n:
-        x, y = y, x+y
+        x, y = y, x + y
         c += 1
     return y
+
 
 if __name__ == "__main__":
     s = "abc"
